@@ -40,7 +40,6 @@ def visualize_graph(graph, shortest_paths, start_node):
     plt.title(f"Граф та найкоротші шляхи від вузла '{start_node}'")
     plt.show()
 
-
 # Приклад використання:
 graph = {
     'A': {'B': 1, 'C': 4},
