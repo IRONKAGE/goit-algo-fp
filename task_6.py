@@ -97,28 +97,32 @@ def visualize_comparison(items, budget):
     plt.show()
 
 # Приклад використання:
-budget = 100
-items = {
-    "pizza": {"cost": 50, "calories": 300},
-    "hamburger": {"cost": 40, "calories": 250},
-    "hot-dog": {"cost": 30, "calories": 200},
-    "pepsi": {"cost": 10, "calories": 100},
-    "cola": {"cost": 15, "calories": 220},
-    "potato": {"cost": 25, "calories": 350}
-}
+def solve_diet_problem():
+    budget = 100
+    items = {
+        "pizza": {"cost": 50, "calories": 300},
+        "hamburger": {"cost": 40, "calories": 250},
+        "hot-dog": {"cost": 30, "calories": 200},
+        "pepsi": {"cost": 10, "calories": 100},
+        "cola": {"cost": 15, "calories": 220},
+        "potato": {"cost": 25, "calories": 350}
+    }
 
-print(f"\n--- Бюджет: {budget}₴ ---")
+    print(f"\n--- Бюджет: {budget}₴ ---")
 
-greedy_res = greedy_algorithm(items, budget)
-print("\nЖадібний алгоритм (пріоритет за співвідношенням калорії/вартість):")
-print(f"Страви: {greedy_res['items']}")
-print(f"Загальна калорійність: {greedy_res['total_calories']}")
-print(f"Залишок бюджету: {greedy_res['remaining_budget']}")
+    greedy_res = greedy_algorithm(items, budget)
+    print("\nЖадібний алгоритм (пріоритет за співвідношенням калорії/вартість):")
+    print(f"Страви: {greedy_res['items']}")
+    print(f"Загальна калорійність: {greedy_res['total_calories']}")
+    print(f"Залишок бюджету: {greedy_res['remaining_budget']}")
 
-dp_res = dynamic_programming(items, budget)
-print("\nДинамічне програмування (пошук глобального оптимуму):")
-print(f"Страви: {dp_res['items']}")
-print(f"Загальна калорійність: {dp_res['total_calories']}")
-print(f"Залишок бюджету: {dp_res['remaining_budget']}")
+    dp_res = dynamic_programming(items, budget)
+    print("\nДинамічне програмування (пошук глобального оптимуму):")
+    print(f"Страви: {dp_res['items']}")
+    print(f"Загальна калорійність: {dp_res['total_calories']}")
+    print(f"Залишок бюджету: {dp_res['remaining_budget']}")
 
-visualize_comparison(items, budget)
+    visualize_comparison(items, budget)
+
+if __name__ == "__main__":
+    solve_diet_problem()

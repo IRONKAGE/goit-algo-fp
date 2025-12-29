@@ -104,7 +104,7 @@ def run_bfs(root):
     draw_tree_with_colors(root, node_colors_map, "Обхід у ширину (BFS) ☯︎ Червоний градієнт\n")
 
 # Приклад використання:
-def benchmark():
+def visualize_search_algorithms():
     data = [0, 4, 5, 10, 1, 3, 2, 8, 7, 9, 6, 100, 50, 25, 333]
     heapq.heapify(data)
     root_node = list_to_tree(data)
@@ -123,4 +123,4 @@ def benchmark():
         print("Купа порожня.")
 
 if __name__ == '__main__':
-    benchmark()
+    visualize_search_algorithms()

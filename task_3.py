@@ -37,23 +37,27 @@ def visualize_graph(graph, shortest_paths, start_node):
     nx.draw_networkx_labels(G, pos, labels=dist_labels, font_size=10, font_family='sans-serif')
 
     plt.axis('off')
-    plt.title(f"Граф та найкоротші шляхи від вузла '{start_node}'")
+    plt.title(f"Граф та найкоротші шляхи від вузла '{start_node}'\n")
     plt.show()
 
 # Приклад використання:
-graph = {
-    'A': {'B': 1, 'C': 4},
-    'B': {'A': 1, 'C': 2, 'D': 5},
-    'C': {'A': 4, 'B': 2, 'D': 1},
-    'D': {'B': 5, 'C': 1, 'E': 3},
-    'E': {'D': 3}
-}
-start_node = 'A'
+def visualize_shortest_paths():
+    graph = {
+        'A': {'B': 1, 'C': 4},
+        'B': {'A': 1, 'C': 2, 'D': 5},
+        'C': {'A': 4, 'B': 2, 'D': 1},
+        'D': {'B': 5, 'C': 1, 'E': 3},
+        'E': {'D': 3}
+    }
+    start_node = 'A'
 
-shortest_paths = dijkstra(graph, start_node)
+    shortest_paths = dijkstra(graph, start_node)
 
-print(f"Найкоротші шляхи від початкової вершини '{start_node}':")
-for node, distance in shortest_paths.items():
-    print(f"До вершини {node}: {distance}")
+    print(f"Найкоротші шляхи від початкової вершини '{start_node}':")
+    for node, distance in shortest_paths.items():
+        print(f"До вершини {node}: {distance}")
 
-visualize_graph(graph, shortest_paths, start_node)
+    visualize_graph(graph, shortest_paths, start_node)
+
+if __name__ == '__main__':
+    visualize_shortest_paths()

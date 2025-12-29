@@ -14,6 +14,7 @@ def monte_carlo_simulation(num_throws=100000):
     probabilities = {s: (count / num_throws) * 100 for s, count in sums_counts.items()}
     return probabilities
 
+# Приклад використання:
 def simulate_dice_rolls_comparison():
     num_throws = 100000
     mc_probs = monte_carlo_simulation(num_throws)

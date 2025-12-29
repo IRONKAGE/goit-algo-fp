@@ -24,7 +24,8 @@ def binary_fractal_tree(t, branch_len, angle, level):
     t.setheading(heading)
     t.pendown()
 
-def main():
+# Приклад використання:
+def render_tree_scene():
     try:
         recursion_level = int(input("Введіть бажаний рівень рекурсії (наприклад, 7-10): "))
     except ValueError:
@@ -50,4 +51,4 @@ def main():
     screen.mainloop()
 
 if __name__ == "__main__":
-    main()
+    render_tree_scene()

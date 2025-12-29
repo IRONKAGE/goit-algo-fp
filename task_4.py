@@ -57,6 +57,10 @@ def draw_heap(data_list):
         print("Список купи порожній.")
 
 # Приклад використання:
-print("\nВізуалізація впорядкованої бінарної купи:")
-unordered_data = [0, 4, 5, 10, 1, 3, 2, 8, 7, 9, 6]
-draw_heap(unordered_data)
+def display_binary_heap():
+    print("\nВізуалізація впорядкованої бінарної купи:")
+    unordered_data = [0, 4, 5, 10, 1, 3, 2, 8, 7, 9, 6]
+    draw_heap(unordered_data)
+
+if __name__ == '__main__':
+    display_binary_heap()
